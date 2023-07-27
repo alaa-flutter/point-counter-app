@@ -8,13 +8,6 @@ class PointCounter extends StatefulWidget {
 }
 
 class _PointCounterState extends State<PointCounter> {
-  int teamAPoints = 0;
-
-  int teamBPoints = 0;
-
-  void addOnePoint() {
-    print('add one point');
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +35,7 @@ class _PointCounterState extends State<PointCounter> {
                         ),
                       ),
                       Text(
-                        '$teamAPoints',
+                        '0',
                         style: const TextStyle(
                           fontSize: 150,
                         ),
@@ -54,10 +47,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {
-                            teamAPoints++;
-                          });
-                          print(teamAPoints);
+                    ///
                         },
                         child: const Text(
                           'Add 1 Point ',
@@ -73,9 +63,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {
-                            teamAPoints += 2;
-                          });
+                       //
                         },
                         child: const Text(
                           'Add 2 Point',
@@ -91,9 +79,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize:const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {
-                            teamAPoints += 3;
-                          });
+                      //
                         },
                         child:const Text(
                           'Add 3 Point ',
@@ -127,7 +113,7 @@ class _PointCounterState extends State<PointCounter> {
                         ),
                       ),
                       Text(
-                        '$teamBPoints',
+                        '0',
                         style: const TextStyle(
                           fontSize: 150,
                         ),
@@ -139,8 +125,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {});
-                          teamBPoints++;
+                        //
                         },
                         child: const Text(
                           'Add 1 Point ',
@@ -156,8 +141,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {});
-                          teamBPoints += 2;
+                        //
                         },
                         child: const Text(
                           'Add 2 Point ',
@@ -173,9 +157,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                          setState(() {
-                            teamBPoints += 3;
-                          });
+                       //
                         },
                         child: const Text(
                           'Add 3 Point ',
@@ -197,10 +179,7 @@ class _PointCounterState extends State<PointCounter> {
                 minimumSize: const Size(150, 50),
               ),
               onPressed: () {
-                setState(() {
-                  teamAPoints = 0;
-                  teamBPoints = 0;
-                });
+          ///
               },
               child: const Text(
                 'Reset',
