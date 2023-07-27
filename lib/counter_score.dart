@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PointCounter extends StatefulWidget {
+class PointCounter extends StatelessWidget {
   const PointCounter({super.key});
-
-  @override
-  State<PointCounter> createState() => _PointCounterState();
-}
-
-class _PointCounterState extends State<PointCounter> {
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +41,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                    ///
+                          ///
                         },
                         child: const Text(
                           'Add 1 Point ',
@@ -63,7 +57,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                       //
+                          //
                         },
                         child: const Text(
                           'Add 2 Point',
@@ -76,12 +70,12 @@ class _PointCounterState extends State<PointCounter> {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.orange,
-                          minimumSize:const Size(150, 50),
+                          minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                      //
+                          //
                         },
-                        child:const Text(
+                        child: const Text(
                           'Add 3 Point ',
                           style: TextStyle(
                             fontSize: 18,
@@ -125,7 +119,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                        //
+                          //
                         },
                         child: const Text(
                           'Add 1 Point ',
@@ -141,7 +135,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                        //
+                          //
                         },
                         child: const Text(
                           'Add 2 Point ',
@@ -157,7 +151,7 @@ class _PointCounterState extends State<PointCounter> {
                           minimumSize: const Size(150, 50),
                         ),
                         onPressed: () {
-                       //
+                          //
                         },
                         child: const Text(
                           'Add 3 Point ',
@@ -179,7 +173,7 @@ class _PointCounterState extends State<PointCounter> {
                 minimumSize: const Size(150, 50),
               ),
               onPressed: () {
-          ///
+                ///
               },
               child: const Text(
                 'Reset',
@@ -195,4 +189,3 @@ class _PointCounterState extends State<PointCounter> {
     );
   }
 }
-
