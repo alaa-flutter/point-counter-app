@@ -5,19 +5,12 @@ import 'package:score/Cubit/counter_cubit.dart';
 import 'Cubit/counter_state.dart';
 
 class PointCounter extends StatelessWidget {
-  PointCounter({super.key});
-int teamAPoints = 0;
-int teamBPoints = 0;
+  const PointCounter({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<CounterCubit , CounterState>(
-      listener: (context, state) {
-        if(state is CounterAIncrementState){
-          teamAPoints = BlocProvider.of<CounterCubit>(context).teamAPoints;
-        }else{
-          teamBPoints = BlocProvider.of<CounterCubit>(context).teamBPoints;
-        }
-      } ,
+      listener: (context, state) { } ,
       builder: (context, state) => Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange,
@@ -42,7 +35,7 @@ int teamBPoints = 0;
                           ),
                         ),
                         Text(
-                          '$teamAPoints',
+                          '${BlocProvider.of<CounterCubit>(context).teamAPoints}',
                           style: const TextStyle(
                             fontSize: 150,
                           ),
@@ -54,7 +47,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            ///
+                            BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "A", buttonNumber: 1);
                           },
                           child: const Text(
                             'Add 1 Point ',
@@ -70,7 +63,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            //
+                           BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "A", buttonNumber: 2);
                           },
                           child: const Text(
                             'Add 2 Point',
@@ -86,7 +79,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            //
+                            BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "A", buttonNumber: 3);
                           },
                           child: const Text(
                             'Add 3 Point ',
@@ -120,7 +113,7 @@ int teamBPoints = 0;
                           ),
                         ),
                         Text(
-                          '$teamBPoints',
+                          '${BlocProvider.of<CounterCubit>(context).teamBPoints}',
                           style: const TextStyle(
                             fontSize: 150,
                           ),
@@ -132,7 +125,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            //
+                            BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "B", buttonNumber:1);
                           },
                           child: const Text(
                             'Add 1 Point ',
@@ -148,7 +141,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            //
+                            BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "B", buttonNumber: 2);
                           },
                           child: const Text(
                             'Add 2 Point ',
@@ -164,7 +157,7 @@ int teamBPoints = 0;
                             minimumSize: const Size(150, 50),
                           ),
                           onPressed: () {
-                            //
+                            BlocProvider.of<CounterCubit>(context).scoreIncrement(team: "B", buttonNumber: 3);
                           },
                           child: const Text(
                             'Add 3 Point ',

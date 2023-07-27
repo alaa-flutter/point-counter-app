@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
   return BlocProvider(
     create: (context) => CounterCubit(),
-    child: const MaterialApp(
+    child:const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PointCounter(),
     ),
